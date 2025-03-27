@@ -60,6 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
             audio: "songs/scientist.mp3",
             albumImage: "images/scientist.jpg",
             album: "Formula of Love: O+T=<3"
+        },
+        {
+            title: "MOONLIGHT",
+            audio: "songs/moonlight.mp3",
+            albumImage: "images/scientist.jpg",
+            album: "Formula of Love: O+T=<3"
+        },
+        {
+            title: "I GOT YOU",
+            audio: "songs/igotyou.mp3",
+            albumImage: "images/withyou.jpg",
+            album: "WITH YOU-th"
         }
     ];
     
