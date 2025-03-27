@@ -1,4 +1,117 @@
 body {
     font-family: Arial, sans-serif;
     margin: 40px;
+    background-color: #f9f0ff;
+    color: #5a2d8a;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: #d64cb8;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.stats {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.player-container {
+    margin: 30px 0;
+}
+
+#play-btn {
+    background-color: #d64cb8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#play-btn:hover {
+    background-color: #b83ca0;
+}
+
+.game-area {
+    min-height: 400px;
+    position: relative;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 30px auto;
+    max-width: 600px;
+    transition: all 0.5s ease;
+}
+
+.option-btn {
+    background-color: #a56de2;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option-btn:hover {
+    background-color: #8a4ecf;
+    transform: scale(1.03);
+}
+
+.album-display {
+    margin: 20px auto;
+    max-width: 300px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.album-display.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.album-display img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.album-title {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.feedback {
+    min-height: 50px;
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.correct {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: #F44336;
+    font-weight: bold;
+}
+
+#song-clip {
+    width: 100%;
+    max-width: 400px;
 }

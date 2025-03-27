@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TWICE Website</title>
-    <link rel = "stylesheet" href = "style.css">
+    <title>TWICE Song Guesser!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <script src = "script.js"></script>
+    <div class="container">
+        <h1>TWICE Song Guesser!</h1>
+        <div class="stats">
+            <p>Accuracy: <span id="accuracy">0%</span></p>
+            <p>Round: <span id="round">1</span>/<span id="total-rounds">0</span></p>
+        </div>
+        
+        <div class="player-container">
+            <audio id="song-clip" controls></audio>
+            <button id="play-btn">Play Clip</button>
+        </div>
+        
+        <div class="game-area">
+            <div class="options" id="options"></div>
+            <div class="album-display" id="album-display"></div>
+        </div>
+        
+        <div class="feedback" id="feedback"></div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
