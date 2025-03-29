@@ -1,80 +1,6 @@
+import songDatabase from '../data/songDatabase.js';
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Enhanced song database with album images
-    const songDatabase = [
-        { 
-            title: "FANCY", 
-            audio: "songs/fancy.mp3",
-            albumImage: "images/fancy.jpg",
-            album: "FANCY YOU"
-        },
-        { 
-            title: "TT", 
-            audio: "songs/tt.mp3",
-            albumImage: "images/tt.jpg",
-            album: "TWICEcoaster: LANE 1"
-        },
-        { 
-            title: "What is Love?", 
-            audio: "songs/whatislove.mp3",
-            albumImage: "images/whatislove.jpg",
-            album: "What is Love?"
-        },
-        { 
-            title: "Feel Special", 
-            audio: "songs/feelspecial.mp3",
-            albumImage: "images/feelspecial.jpg",
-            album: "Feel Special"
-        },
-        { 
-            title: "LIKEY", 
-            audio: "songs/likey.mp3",
-            albumImage: "images/likey.jpg",
-            album: "Twicetagram"
-        },
-        { 
-            title: "CHEER UP", 
-            audio: "songs/cheerup.mp3",
-            albumImage: "images/cheerup.jpg",
-            album: "PAGE TWO"
-        },
-        { 
-            title: "YES or YES", 
-            audio: "songs/yesoryes.mp3",
-            albumImage: "images/yesoryes.jpg",
-            album: "YES or YES"
-        },
-        { 
-            title: "Heart Shaker", 
-            audio: "songs/heartshaker.mp3",
-            albumImage: "images/heartshaker.jpg",
-            album: "Merry & Happy"
-        },
-        { 
-            title: "I CAN'T STOP ME", 
-            audio: "songs/icantstopme.mp3",
-            albumImage: "images/icantstopme.jpg",
-            album: "Eyes Wide Open"
-        },
-        { 
-            title: "Scientist", 
-            audio: "songs/scientist.mp3",
-            albumImage: "images/scientist.jpg",
-            album: "Formula of Love: O+T=<3"
-        },
-        {
-            title: "MOONLIGHT",
-            audio: "songs/moonlight.mp3",
-            albumImage: "images/scientist.jpg",
-            album: "Formula of Love: O+T=<3"
-        },
-        {
-            title: "I GOT YOU",
-            audio: "songs/igotyou.mp3",
-            albumImage: "images/withyou.jpg",
-            album: "WITH YOU-th"
-        }
-    ];
-    
     // Game configuration
     const config = {
         clipDuration: 10 // seconds
@@ -116,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         elements.feedback.className = 'feedback';
         elements.albumDisplay.innerHTML = '';
         elements.albumDisplay.classList.remove('show');
+        elements.optionsContainer.style.marginTop = '30px';
         
         // Select a random song not played yet
         let availableSongs = songDatabase.filter(song => 
@@ -123,8 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
         );
         
         gameState.currentSong = availableSongs[Math.floor(Math.random() * availableSongs.length)];
-        
-        // Store played songs
         gameState.playedSongs.push(gameState.currentSong.title);
         
         // Generate options (3 wrong + correct answer)
@@ -202,8 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="album-title">${gameState.currentSong.album}</div>
         `;
         elements.albumDisplay.classList.add('show');
-        
-        // Move options down
         elements.optionsContainer.style.marginTop = '20px';
     }
     
@@ -237,9 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
             isPlaying: false,
             playedSongs: []
         };
-        
         elements.round.textContent = '1';
-        elements.optionsContainer.style.marginTop = '30px';
         initGame();
     }
     
@@ -254,7 +175,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Helper function to get random start time for song clip
     function getRandomStartTime() {
-        // Assuming songs are at least 30 seconds long
         return Math.floor(Math.random() * 20);
     }
     
@@ -270,7 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
             elements.playBtn.textContent = 'Pause Clip';
             gameState.isPlaying = true;
             
-            // Auto-pause after clip duration
             setTimeout(() => {
                 elements.songClip.pause();
                 elements.playBtn.textContent = 'Play Clip';
