@@ -69,7 +69,140 @@ const songDatabase = [
         albumImage: "../assets/images/readytobe",
         album: "READY TO BE",
     },
+    {
+        title: "BLAME IT ON ME",
+        audio: "../assets/audio/blameitonme",
+        albumImage: "../assets/images/readytobe",
+        album: "READY TO BE",
+    },
+    {
+        title: "WALLFLOWER",
+        audio: "../assets/audio/wallflower",
+        albumImage: "../assets/images/readytobe",
+        album: "READY TO BE",
+    },
+    {
+        title: "CRAZY STUPID LOVE",
+        audio: "../assets/audio/crazystupidlove",
+        albumImage: "../assets/images/readytobe",
+        album: "READY TO BE",
+    },
     
+    //Between 1&2
+    {
+        title: "Talk that Talk",
+        audio: "../assets/audio/talkthattalk",
+        albumImage: "../assets/images/between1and2",
+        album: "BETWEEN 1&2",
+    },
+    {
+        title: "Queen of Hearts",
+        audio: "../assets/audio/queenofhearts",
+        albumImage: "../assets/images/between1and2",
+        album: "BETWEEN 1&2",
+    },
+    {
+        title: "Basics",
+        audio: "../assets/audio/basics",
+        albumImage: "../assets/images/between1and2",
+        album: "BETWEEN 1&2",
+    },
+    {
+        title: "Trouble",
+        audio: "../assets/audio/trouble",
+        albumImage: "../assets/images/between1and2",
+        album: "BETWEEN 1&2",
+    },
+    {
+        title: "Brave",
+        audio: "../assets/audio/brave",
+        albumImage: "../assets/images/between1and2",
+        album: "BETWEEN 1&2",
+    },
+    {
+        title: "Gone",
+        audio: "../assets/audio/gone",
+        albumImage: "../assets/images/between1and2",
+        album: "BETWEEN 1&2",
+    },
+    {
+        title: "When We Were Kids",
+        audio: "../assets/audio/whenwerewerekids",
+        albumImage: "../assets/images/between1and2",
+        album: "BETWEEN 1&2",
+    },
+    
+    //Doughnut
+    {
+        title: "Wonderful Day",
+        audio: "../assets/audio/wonderfulday",
+        albumImage: "../assets/images/doughnut",
+        album: "Doughnut",
+    },
+
+    //Just be yourself
+    {
+        title: "Just be yourself",
+        audio: "../assets/audio/justbeyourself",
+        albumImage: "../assets/images/justbeyourself",
+        album: "Just be yourself",
+    },
+
+    //Celebrate
+    {
+        title: "Celebrate",
+        audio: "../assets/audio/celebrate",
+        albumImage: "../assets/images/celebrate",
+        album: "Celebrate",
+    },
+    {
+        title: "Voices of Delight",
+        audio: "../assets/audio/voicesofdelight",
+        albumImage: "../assets/images/celebrate",
+        album: "Celebrate",
+    },
+    {
+        title: "TICK TOCK",
+        audio: "../assets/audio/ticktock",
+        albumImage: "../assets/images/celebrate",
+        album: "Celebrate",
+    },
+    {
+        title: "Flow like waves",
+        audio: "../assets/audio/flowlikewaves",
+        albumImage: "../assets/images/flowlikewaves",
+        album: "Celebrate",
+    },
+    {
+        title: "That's all I'm saying",
+        audio: "../assets/audio/thatsallimsaying",
+        albumImage: "../assets/images/celebrate",
+        album: "Celebrate",
+    },
+    {
+        title: "Bitter Sweet",
+        audio: "../assets/audio/bittersweet",
+        albumImage: "../assets/images/celebrate",
+        album: "Celebrate",
+    },
+    {
+        title: "Sandcastle",
+        audio: "../assets/audio/sandcastle",
+        albumImage: "../assets/images/celebrate",
+        album: "Celebrate",
+    },
+    {
+        title: "Just be yourself",
+        audio: "../assets/audio/justbeyourself",
+        albumImage: "../assets/images/celebrate",
+        album: "Celebrate",
+    },
+    {
+        title: "Doughnut",
+        audio: "../assets/audio/doughnut",
+        albumImage: "../assets/images/celebrate",
+        album: "Celebrate",
+    },
 
 ];
 
@@ -78,8 +211,8 @@ export default songDatabase;
 /*
     {
         title: "",
-        audio: "",
-        albumImage: "",
+        audio: "../assets/audio/",
+        albumImage: "../assets/images/",
         album: "",
     },
 */
