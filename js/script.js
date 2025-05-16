@@ -1,4 +1,5 @@
 import songDatabase from '../data/songDatabase.js';
+import songDatabase2 from '../data/songDatabaseMain.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Game configuration
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize game
     function initGame() {
-        elements.totalRounds.textContent = songDatabase.length;
+        elements.totalRounds.textContent = songDatabase2.length;
         updateStats();
         setupRound();
     }
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         elements.optionsContainer.style.marginTop = '30px';
         
         // Select a random song not played yet
-        let availableSongs = songDatabase.filter(song => 
+        let availableSongs = songDatabase2.filter(song => 
             !gameState.playedSongs.includes(song.title)
         );
         
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Generate options (3 wrong + correct answer)
         gameState.options = [gameState.currentSong.title];
         while (gameState.options.length < 4) {
-            const randomSong = songDatabase[Math.floor(Math.random() * songDatabase.length)].title;
+            const randomSong = songDatabase2[Math.floor(Math.random() * songDatabase2.length)].title;
             if (!gameState.options.includes(randomSong)) {
                 gameState.options.push(randomSong);
             }
@@ -110,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Move to next round or end game
         setTimeout(() => {
-            if (gameState.currentRound < songDatabase.length) {
+            if (gameState.currentRound < songDatabase2.length) {
                 gameState.currentRound++;
                 elements.round.textContent = gameState.currentRound;
                 setupRound();
@@ -139,11 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // End game
     function endGame() {
-        const finalAccuracy = Math.round((gameState.correctAnswers / songDatabase.length) * 100);
+        const finalAccuracy = Math.round((gameState.correctAnswers / songDatabase2.length) * 100);
         elements.feedback.innerHTML = `
             <h3>Game Over!</h3>
             <p>Your final accuracy: ${finalAccuracy}%</p>
-            <p>You got ${gameState.correctAnswers} out of ${songDatabase.length} correct!</p>
+            <p>You got ${gameState.correctAnswers} out of ${songDatabase2.length} correct!</p>
             <button id="restart-btn">Play Again</button>
         `;
         
